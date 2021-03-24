@@ -1,0 +1,264 @@
+:root {
+  --fuente-titulo: "Sofia", cursive;
+  --fuente-primaria: "Quicksand", sans-serif;
+  --color-primary: #8a5b04;
+  --color-secundary: #0f5508;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-family: var(--fuente-titulo);
+  font-size: 4rem;
+}
+
+#internal-pages {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#internal-pages a {
+  text-decoration: none;
+  font-family: var(--fuente-primaria);
+  font-weight: bold;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: var(--color-secundary);
+}
+#internal-pages a:hover {
+  color: var(--color-primary);
+}
+
+.contenedor img {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.centrado {
+  font-family: var(--fuente-primaria);
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+}
+.nav-foo {
+  width: 100%;
+  height: 15rem;
+  background-color: red;
+}
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+/* --------------- */
+p {
+  font-family: var(--fuente-primaria);
+}
+.footer-dark {
+  margin-top: 0.5rem;
+  padding: 50px 0;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: var(--fuente-primaria);
+}
+
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-family: var(--fuente-primaria);
+}
+
+.footer-dark ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .footer-dark .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  color: var(--color-primary);
+  opacity: 0.7;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 24px;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+/* ------ */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3rem;
+  resize: vertical;
+}
+textarea {
+  margin-left: 13.5rem;
+  height: 20rem;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--color-secundary);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-primary);
+}
+
+.container {
+  border-radius: 3rem;
+  background-color: #f5f4f4;
+  padding: 2rem;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 0.6rem;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 0.6rem;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Busqueda */
+input[type="search"] {
+  width: 30%;
+  border: 0.2rem solid #ccc;
+  border-radius: 3rem;
+  font-size: 1rem;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type="search"]:focus {
+  width: 50%;
+}
+.fondo {
+  width: 100%;
+  min-height: 50rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+figure {
+  width: 20rem;
+  height: 20rem;
+  margin-top: 2rem;
+  border: 1rem solid black;
+}
